@@ -69,6 +69,13 @@ function requireAuth() {
   }
 }
 
+const piUser = localStorage.getItem("pi_user");
+if (piUser) {
+  const user = JSON.parse(piUser);
+  const el = document.getElementById("piUsername");
+  if (el) el.textContent = user.username;
+}
+
 // Sevice main
 
 document.querySelectorAll('.cta-btn').forEach(btn => {
