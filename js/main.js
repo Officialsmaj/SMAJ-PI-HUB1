@@ -76,6 +76,15 @@ if (piUser) {
   if (el) el.textContent = user.username;
 }
 
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("pi_user");
+    window.location.href = "../../pages/auth/login.html";
+  });
+}
+
 // Sevice main
 
 document.querySelectorAll('.cta-btn').forEach(btn => {
