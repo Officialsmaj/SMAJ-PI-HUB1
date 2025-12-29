@@ -1,3 +1,16 @@
+// ===============================
+// PI SDK – SANDBOX MODE
+// ===============================
+if (window.Pi) {
+  Pi.init({
+    version: "2.0",
+    sandbox: true
+  });
+  console.log("Pi SDK initialized in SANDBOX mode");
+} else {
+  console.warn("Pi SDK not found. Open in Pi Browser.");
+}
+
 // Mobile Menu Toggle
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
