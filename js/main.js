@@ -57,6 +57,18 @@ if (menuToggle && navMenu) {
   });
 }
 
+// ===============================
+// AUTH GUARD – PROTECT PAGES
+// ===============================
+function requireAuth() {
+  const piUser = localStorage.getItem("pi_user");
+
+  if (!piUser) {
+    console.warn("Unauthorized access. Redirecting to login.");
+    window.location.href = "../../pages/auth/login.html";
+  }
+}
+
 // Sevice main
 
 document.querySelectorAll('.cta-btn').forEach(btn => {
